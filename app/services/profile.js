@@ -6,15 +6,19 @@ export default Ember.Service.extend({
 
   profile: undefined,
 
-  login(username, password) {
+  login(email, password) {
     this.get('ajax').request('/login', {
       method: 'POST',
       data: {
-        username: username,
+        email: email,
         password: password
       }
     }).then((err, userId) => {
       this.set('profile', this.get('store').findRecord('user', userId));
     });
+  },
+
+  isLoggedIn() {
+    return this.get('profile');
   }
 });
