@@ -1,0 +1,21 @@
+<div class="login">
+  <h1>Login</h1>
+  {{#if accounts.isLoggedIn}}
+    <div class="currently-logged-in">
+      <h3>Please sign out to log into a different account</h3>
+      <button class="btn action-button" {{action "logout"}}>Logout</button>
+    </div>
+  {{else}}
+    <form id="login-form" {{action "login" on="submit"}}>
+      <div class="login-field">
+        {{input type="email" id="login-email" class="input-field" placeholder="Email" value=email}}
+        <p class="login-error-message">{{loginCredentialErrorMessage}}</p>
+      </div>
+      <div class="login-field">
+        {{input type="password" id="login-password" class="input-field" placeholder="Password" value=password}}
+        <p class="login-error-message">{{loginCredentialErrorMessage}}</p>
+      </div>
+      <button type="submit" class="btn action-button" disabled={{isAttemptingLogin}}>Login</button>
+    </form>
+  {{/if}}
+</div>
