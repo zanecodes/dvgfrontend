@@ -1,0 +1,8 @@
+<!--Using the user model-->
+{{#with model as |user|}}
+  {{#each model.employees as |employee|}}
+    <div class="employee">
+      {{employee.name}}
+    </div>
+  {{/each}}
+{{/with}}
