@@ -15,7 +15,7 @@
         {{input type="password" id="login-password" class="input-field" placeholder="Password" value=password}}
         <p class="login-error-message">{{loginCredentialErrorMessage}}</p>
       </div>
-      <button type="submit" class="btn action-button" disabled={{isAttemptingLogin}}>Login</button>
+      {{#link-to 'users.user' 'asdf'}}<button type="submit" class="btn action-button" disabled={{isAttemptingLogin}}>Login</button>{{/link-to}}
     </form>
   {{/if}}
 </div>
