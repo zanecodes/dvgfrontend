@@ -15,7 +15,10 @@ Router.map(function() {
   this.route('users', {path: '/users'}, function() {
       this.route('user', {path: '/:user_id'});
     });
+  this.route('employees', {path: '/employees'}, function() {
+    this.route('employee', {path: '/:employee_id'});
   });
+});
 
 
 export default Router;
