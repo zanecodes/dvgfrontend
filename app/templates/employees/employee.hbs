@@ -1,3 +1,9 @@
 {{#with model as |employee|}}
-  {{model.name}}
+  <div>
+    <h1>Employee</h1>
+    <ul>
+      <li>{{model.name}}</li>
+      <li>{{model.address}}</li>
+    </ul>
+  </div>
 {{/with}}
