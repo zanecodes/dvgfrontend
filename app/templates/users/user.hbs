@@ -1,5 +1,13 @@
 <!--Using the user model-->
 {{#with model as |user|}}
+  <div class="row">
+    <div class="col-xs-6">
+      Profile
+    </div>
+    <div class="col-xs-6">
+      Username: {{user.username}}
+    </div>
+  </div>
   {{#each model.employees as |employee|}}
     <div class="employee">
       {{employee.name}}
