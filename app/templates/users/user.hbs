@@ -8,9 +8,12 @@
       Username: {{user.username}}
     </div>
   </div>
+  <div class="row">
+    <div class="col-xs-12">Employees</div>
+  </div>
   {{#each model.employees as |employee|}}
     <div class="employee">
-      {{employee.name}}
+      {{employee.name}}  {{#link-to "employees.employee" 'abcde' model=employee}}view{{/link-to}}
     </div>
   {{/each}}
 {{/with}}
